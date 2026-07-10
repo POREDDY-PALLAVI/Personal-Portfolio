@@ -1,24 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { PortfolioNavigation } from "@/components/portfolio/navigation";
+import { PortfolioHero } from "@/components/portfolio/hero";
+import { PortfolioProjects } from "@/components/portfolio/projects";
+import { PortfolioSkills } from "@/components/portfolio/skills";
+import { PortfolioExperience } from "@/components/portfolio/experience";
+import { PortfolioContact } from "@/components/portfolio/contact";
+import { PortfolioFooter } from "@/components/portfolio/footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Alex Morgan — Product Designer & Developer" },
+      { name: "description", content: "Portfolio of Alex Morgan, a product designer and developer crafting thoughtful digital experiences." },
+      { property: "og:title", content: "Alex Morgan — Product Designer & Developer" },
+      { property: "og:description", content: "Portfolio of Alex Morgan, a product designer and developer crafting thoughtful digital experiences." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: PortfolioPage,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function PortfolioPage() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <PortfolioNavigation />
+      <main>
+        <PortfolioHero />
+        <PortfolioProjects />
+        <PortfolioSkills />
+        <PortfolioExperience />
+        <PortfolioContact />
+      </main>
+      <PortfolioFooter />
     </div>
   );
 }

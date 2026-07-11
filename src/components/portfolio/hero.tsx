@@ -1,4 +1,4 @@
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
 import heroImage from "@/assets/hero-portfolio.jpg";
 
 export function PortfolioHero() {
@@ -17,26 +17,33 @@ export function PortfolioHero() {
 
       <div className="max-w-3xl text-center">
         <p className="mb-4 text-sm font-medium uppercase tracking-widest text-accent">
-          Product Designer & Developer
+          Full Stack Developer
         </p>
         <h1 className="text-balance font-display text-5xl font-normal leading-[1.1] text-foreground sm:text-6xl md:text-7xl">
-          Alex Morgan
+          Poreddy Pallavi
         </h1>
-        <p className="mt-6 text-balance text-lg leading-relaxed text-muted-foreground sm:text-xl">
-          I design and build digital experiences that feel intuitive, look
-          beautiful, and solve real problems. Currently based in San Francisco,
-          working with teams who care about craft.
+        <p className="mt-6 text-balance text-base leading-relaxed text-muted-foreground sm:text-lg">
+          AIML graduate and aspiring Java Full Stack Developer — I love building
+          responsive websites and applications that make a real impact.
         </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <a
             href="#projects"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
+            className="inline-flex min-h-11 items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
           >
             View my work
           </a>
           <a
+            href="/resume.pdf"
+            download
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition-all hover:bg-secondary"
+          >
+            <Download className="h-4 w-4" />
+            Download Resume
+          </a>
+          <a
             href="#contact"
-            className="inline-flex items-center justify-center rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition-all hover:bg-secondary"
+            className="inline-flex min-h-11 items-center justify-center rounded-full px-6 py-3 text-sm font-medium text-foreground underline-offset-4 hover:underline"
           >
             Get in touch
           </a>
@@ -44,11 +51,10 @@ export function PortfolioHero() {
       </div>
 
       <a
-        href="#projects"
+        href="#about"
         className="absolute bottom-8 flex flex-col items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-        aria-label="Scroll to projects"
+        aria-label="Scroll to about section"
       >
-        <span className="sr-only">Scroll to projects</span>
         <ArrowDown className="h-5 w-5 animate-bounce" />
       </a>
     </section>

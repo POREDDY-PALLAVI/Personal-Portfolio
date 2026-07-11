@@ -2,16 +2,16 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const skillGroups = [
   {
-    title: "Design",
-    skills: ["UI/UX Design", "Design Systems", "Prototyping", "User Research", "Visual Identity"],
+    title: "Languages",
+    skills: ["Java", "JavaScript", "HTML", "CSS"],
   },
   {
-    title: "Development",
-    skills: ["React", "TypeScript", "Tailwind CSS", "Next.js", "TanStack"],
+    title: "Database",
+    skills: ["MySQL"],
   },
   {
     title: "Tools",
-    skills: ["Figma", "Framer", "GitHub", "Vercel", "Notion"],
+    skills: ["Git", "GitHub"],
   },
 ];
 
@@ -27,8 +27,7 @@ export function PortfolioSkills() {
             Skills
           </h2>
           <p className="mt-3 text-muted-foreground">
-            A mix of design craft and frontend engineering — I like to work
-            where product and code meet.
+            The tools and technologies I work with as a Java Full Stack Developer.
           </p>
         </div>
 
@@ -44,10 +43,7 @@ export function PortfolioSkills() {
                 </h3>
                 <ul className="space-y-2">
                   {group.skills.map((skill) => (
-                    <li
-                      key={skill}
-                      className="text-sm text-muted-foreground"
-                    >
+                    <li key={skill} className="text-sm text-muted-foreground">
                       {skill}
                     </li>
                   ))}

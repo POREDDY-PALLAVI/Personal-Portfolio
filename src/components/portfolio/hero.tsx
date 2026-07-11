@@ -1,5 +1,6 @@
 import { ArrowDown, Download } from "lucide-react";
 import heroImage from "@/assets/hero-portfolio.jpg";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 export function PortfolioHero() {
   return (
@@ -34,8 +35,8 @@ export function PortfolioHero() {
             View my work
           </a>
           <a
-            href="/resume.pdf"
-            download
+            href={resumeAsset.url}
+            download="Poreddy_Pallavi_Resume.pdf"
             className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition-all hover:bg-secondary"
           >
             <Download className="h-4 w-4" />

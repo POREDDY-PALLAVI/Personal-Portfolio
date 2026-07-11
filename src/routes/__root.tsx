@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Poreddy Pallavi — Java Full Stack Developer" },
       { name: "description", content: "Portfolio of Poreddy Pallavi, an AIML graduate and aspiring Java Full Stack Developer." },
-      { name: "author", content: "Alex Morgan" },
+      { name: "author", content: "Poreddy Pallavi" },
       { property: "og:title", content: "Poreddy Pallavi — Java Full Stack Developer" },
       { property: "og:description", content: "Portfolio of Poreddy Pallavi, an AIML graduate and aspiring Java Full Stack Developer." },
       { property: "og:type", content: "website" },

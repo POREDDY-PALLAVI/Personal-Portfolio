@@ -5,9 +5,6 @@ export function PortfolioFooter() {
         <p className="text-sm text-muted-foreground">
           © {new Date().getFullYear()} Poreddy Pallavi. All rights reserved.
         </p>
-        <p className="text-sm text-muted-foreground">
-          Designed & built with care.
-        </p>
       </div>
     </footer>
   );
